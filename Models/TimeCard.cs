@@ -16,7 +16,13 @@ namespace PayApp.Models
         public decimal ClockOutMinute { get; set; }
         public decimal PayRate { get; set; }
         [DataType(DataType.Date)]
-        public DateTime Date { get; set; }
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+        [Display(Name = "In Date")]
+        public DateTime InDate { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Out Date")]
+        public DateTime OutDate { get; set; }
         public decimal TotalHour { get; set; }
         public decimal TotalMinute { get; set; }
 

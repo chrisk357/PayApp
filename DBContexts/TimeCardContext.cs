@@ -28,7 +28,8 @@ namespace PayApp.DBContexts
                     ClockOutMinute = 05,
                     TotalHour = 5,
                     TotalMinute = 05,
-                    
+                    InDate = '08-01-2019',
+                    OutDate = '08-01-2019'                
 
 
                 }
