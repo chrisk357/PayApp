@@ -1,0 +1,3 @@
+﻿Created AppUserDbContext to compliment AppUser which inherited from base identityDB
+But ran into some problems with this while edititng the start up method could be something to dio witj
+dependenycy injection
