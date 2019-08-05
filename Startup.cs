@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using PayApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace PayApp
 {
@@ -28,6 +29,15 @@ namespace PayApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+      
+            services.AddIdentityCore<IdentityUser>(options => { });
+            services.AddScoped<IUserStore<IdentityUser>,
+            UserOnlyStore<IdentityUser, IdentityDbContext>>();
+
+            services.AddAuthentication();
+
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -35,7 +45,7 @@ namespace PayApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<IdentityDbContext, ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
