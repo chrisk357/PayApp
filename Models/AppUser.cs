@@ -8,14 +8,12 @@ namespace PayApp.Models
 {
     public class AppUser : IdentityUser
     {
-        public string ULocation { get; set; } = "13 Celsius";
+        public int ID { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public decimal UserPayRate { get; set; }
 
-        public string CId { get; set; }
-    }
 
-    public class Company
-    {
-        public string Id { get; set; }
-        public string CName { get; set; }
+        public ICollection<TimeCard> TimeCards { get; set; }
     }
 }
