@@ -12,6 +12,7 @@ namespace PayApp.Models
         public int ClockInM { get; set; }
         public int ClockOutH { get; set; }
         public int ClockOutM { get; set; }
+        public DateTime ShiftDate { get; set; }
 
         public AppUser AppUser { get; set; }
         public Location Location { get; set; }
