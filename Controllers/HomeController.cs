@@ -30,9 +30,13 @@ namespace PayApp.Controllers
 
         public IActionResult InputTime()
         {
+
             return View();
         }
-
+        public IActionResult TimeDetails()
+        {
+            return View();
+        }
 
 
 

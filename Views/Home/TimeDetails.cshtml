@@ -1,0 +1,48 @@
+﻿@model PayApp.Models.TimeCard
+
+@{
+    ViewData["Title"] = "TimeDetails";
+}
+
+<h1>TimeDetails</h1>
+
+<div>
+    <h4>TimeCard</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClockInH)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClockInH)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClockInM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClockInM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClockOutH)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClockOutH)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClockOutM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClockOutM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShiftDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShiftDate)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <a asp-action="Index">Back to List</a>
+</div>
