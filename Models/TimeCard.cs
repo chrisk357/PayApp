@@ -7,7 +7,7 @@ namespace PayApp.Models
 {
     public class TimeCard   
     {
-        public int TimeCardId { get; set; }
+        public int TimeCardID { get; set; }
         public int ClockInH { get; set; }
         public int ClockInM { get; set; }
         public int ClockOutH { get; set; }

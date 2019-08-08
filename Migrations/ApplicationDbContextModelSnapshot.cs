@@ -202,7 +202,7 @@ namespace PayApp.Migrations
 
             modelBuilder.Entity("PayApp.Models.TimeCard", b =>
                 {
-                    b.Property<int>("TimeCardId")
+                    b.Property<int>("TimeCardID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -220,7 +220,7 @@ namespace PayApp.Migrations
 
                     b.Property<DateTime>("ShiftDate");
 
-                    b.HasKey("TimeCardId");
+                    b.HasKey("TimeCardID");
 
                     b.HasIndex("AppUserId");
 
@@ -233,9 +233,9 @@ namespace PayApp.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
-                    b.Property<string>("FirstName");
+                    b.Property<int>("AppUserID");
 
-                    b.Property<int>("ID");
+                    b.Property<string>("FirstName");
 
                     b.Property<string>("LastName");
 

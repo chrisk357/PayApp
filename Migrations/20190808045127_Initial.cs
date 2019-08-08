@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PayApp.Migrations
 {
-    public partial class updatedmodels : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -42,7 +42,7 @@ namespace PayApp.Migrations
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
                     Discriminator = table.Column<string>(nullable: false),
-                    ID = table.Column<int>(nullable: true),
+                    AppUserID = table.Column<int>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     UserPayRate = table.Column<decimal>(nullable: true)
@@ -174,7 +174,7 @@ namespace PayApp.Migrations
                 name: "TimeCard",
                 columns: table => new
                 {
-                    TimeCardId = table.Column<int>(nullable: false)
+                    TimeCardID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ClockInH = table.Column<int>(nullable: false),
                     ClockInM = table.Column<int>(nullable: false),
@@ -186,7 +186,7 @@ namespace PayApp.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TimeCard", x => x.TimeCardId);
+                    table.PrimaryKey("PK_TimeCard", x => x.TimeCardID);
                     table.ForeignKey(
                         name: "FK_TimeCard_AspNetUsers_AppUserId",
                         column: x => x.AppUserId,
