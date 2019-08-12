@@ -18,7 +18,7 @@ namespace PayApp.Models
         [Display(Name = "Clock Out Minutes")]
         public int ClockOutM { get; set; }
         [Display(Name ="Date")]
-        public DateTime ShiftDate { get; set; }
+        public DateTimeOffset ShiftDate { get; set; }
 
         public AppUser AppUser { get; set; }
         public Location Location { get; set; }
