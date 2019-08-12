@@ -14,8 +14,8 @@ namespace PayApp.Data
         {
         }
 
-        public DbSet<AppUser> AppUser { get; set; }
-        public DbSet<TimeCard> TimeCard { get; set; }
-        public DbSet<Location> Location { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<TimeCard> TimeCards { get; set; }
+        public DbSet<Location> Locations { get; set; }
     }
 }

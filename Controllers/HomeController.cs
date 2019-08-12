@@ -11,6 +11,7 @@ namespace PayApp.Controllers
 {
     public class HomeController : Controller
     {
+        
         private readonly UserManager<IdentityUser> userManager;
 
         public HomeController(UserManager<IdentityUser> userManager)

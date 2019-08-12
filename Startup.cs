@@ -14,6 +14,8 @@ using PayApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using PayApp.Models;
+using PayApp.Migrations;
 
 namespace PayApp
 {
@@ -29,7 +31,7 @@ namespace PayApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddTransient<ITimeCardRepository, TimeCardRepository>();
       
             services.AddIdentityCore<IdentityUser>(options => { });
             services.AddScoped<IUserStore<IdentityUser>,
